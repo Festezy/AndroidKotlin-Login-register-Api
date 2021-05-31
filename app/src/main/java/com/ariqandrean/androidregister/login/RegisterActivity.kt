@@ -1,8 +1,6 @@
 package com.ariqandrean.androidregister.login
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,8 +9,7 @@ import com.ariqandrean.androidregister.MainActivity
 import com.ariqandrean.androidregister.R
 import com.ariqandrean.androidregister.api.ApiClient
 import com.ariqandrean.androidregister.api.ApiInterface
-import com.ariqandrean.androidregister.api.DefaultResponse
-import com.ariqandrean.androidregister.api.LoginResponse
+import com.ariqandrean.androidregister.response.DefaultResponse
 import kotlinx.android.synthetic.main.activity_register.*
 import retrofit2.Call
 import retrofit2.Callback

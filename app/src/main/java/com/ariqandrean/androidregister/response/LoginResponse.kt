@@ -1,4 +1,4 @@
-package com.ariqandrean.androidregister.api
+package com.ariqandrean.androidregister.response
 
 import com.google.gson.annotations.SerializedName
 

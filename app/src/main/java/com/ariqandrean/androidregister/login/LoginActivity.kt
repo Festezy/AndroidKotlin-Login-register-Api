@@ -6,13 +6,12 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import com.ariqandrean.androidregister.MainActivity
 import com.ariqandrean.androidregister.R
 import com.ariqandrean.androidregister.api.ApiClient
 import com.ariqandrean.androidregister.api.ApiInterface
-import com.ariqandrean.androidregister.api.LoginResponse
+import com.ariqandrean.androidregister.response.LoginResponse
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
