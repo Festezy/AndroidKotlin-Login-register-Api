@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ariqandrean.androidregister.MainActivity
 import com.ariqandrean.androidregister.R
 import com.ariqandrean.androidregister.model.CategoryModel
+import kotlinx.android.synthetic.main.item_row.view.*
 import retrofit2.http.Url
 import java.net.URL
 
@@ -38,7 +39,7 @@ class CategoryAdapter(val context: Context): RecyclerView.Adapter<CategoryAdapte
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item_row, parent,false)
-        return CategoryAdapter.ViewHolder(v)
+        return ViewHolder(v)
     }
 
     override fun getItemCount(): Int {
@@ -48,10 +49,12 @@ class CategoryAdapter(val context: Context): RecyclerView.Adapter<CategoryAdapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(arrayList[position])
         holder.itemView.setOnClickListener {
-            val model = arrayList.get(position)
+            val model = arrayList[position]
 
             val categoryId : Int = model.id
+
             var intent = Intent(context, MainActivity::class.java) // diganti jadi product activity
+            intent.putExtra("categoryId", categoryId)
             context.startActivities(arrayOf(intent))
         }
     }
